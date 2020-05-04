@@ -18,6 +18,11 @@ class Router {
         }
     }
 
+    public static function cleanup() {
+        if(self::$nomatch) {
+            echo "No route matched!";
+        }
+    }
 
     private static function getUrl() {
         return $_SERVER['REQUEST_URI'];

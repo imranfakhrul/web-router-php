@@ -11,3 +11,5 @@ Router::get('/hello', function() {
     echo "Hello there!";
 });
 
+// For no route match
+Router::cleanup();
