@@ -39,12 +39,18 @@ class Router
 
         $params = self::getMatches($pattern);
 
-        if ($params && is_callable($callback)) {
+        if ($params) {
             self::$nomatch = false;
-
             $functionArguments = array_slice($params, 1);
 
-            $callback(...$functionArguments);
+            if (is_callable($callback)) {
+                $callback(...$functionArguments);
+            } else {
+                $parts = explode('@', $callback);
+
+                $callback = [$parts[0], "{$parts[1]}"];
+                $callback();
+            }
         }
     }
 
