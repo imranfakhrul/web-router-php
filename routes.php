@@ -1,7 +1,6 @@
 <?php
-require "Router.php";
 
-use Routing\Router;
+use Router\Router;
 
 class Routes
 {
