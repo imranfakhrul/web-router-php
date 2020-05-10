@@ -1,0 +1,16 @@
+{
+  "name": "imran/web-router-php",
+  "description": "",
+  "authors": [
+    {
+      "name": "Imran Fakhrul",
+      "email": "fakhrul_imran@yahoo.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Router\\": "Router/"
+    }
+  }
+}
